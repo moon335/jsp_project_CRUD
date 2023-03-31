@@ -1,0 +1,25 @@
+@charset "UTF-8";
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		display: flex;
+		background-color: #222222;
+		margin-bottom: 10px;
+	}
+	
+	#logo-img {
+		width: 100vh;
+		display: flex;
+		justify-content: flex-start;
+	}
+	
+	#logo-img2 {
+		width: 100vh;
+		display: flex;
+		justify-content: flex-end;
+	}
+	
