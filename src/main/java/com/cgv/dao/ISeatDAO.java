@@ -8,6 +8,6 @@ public interface ISeatDAO {
 	
 	ArrayList<SeatDTO> select();
 	SeatDTO select(String name);
-	int update();
+	int update(int id);
 	
 } // end of class

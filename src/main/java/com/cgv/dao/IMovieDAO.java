@@ -2,9 +2,11 @@ package com.cgv.dao;
 
 import java.util.ArrayList;
 
+import com.cgv.dto.MovieDTO;
+
 public interface IMovieDAO {
 	
-	ArrayList<MovieDAO> select();
-	MovieDAO select(String name);
+	ArrayList<MovieDTO> select();
+	MovieDTO select(String name);
 	
 } 

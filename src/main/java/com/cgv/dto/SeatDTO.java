@@ -6,6 +6,9 @@ public class SeatDTO {
 	private String name;
 	private int isChecked;
 	
+	public SeatDTO() {
+	}
+	
 	public SeatDTO(int id, String name, int isChecked) {
 		this.id = id;
 		this.name = name;

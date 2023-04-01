@@ -7,6 +7,9 @@ public class MovieDTO {
 	private int price;
 	private String movieRated;
 	
+	public MovieDTO() {
+	}
+	
 	public MovieDTO(int id, String name, int price, String movieRated) {
 		this.id = id;
 		this.name = name;

@@ -5,6 +5,9 @@ public class TheaterDTO {
 	private int id;
 	private String city;
 	private String name;
+	
+	public TheaterDTO() {
+	}
 
 	public TheaterDTO(int id, String city, String name) {
 		this.id = id;

@@ -132,7 +132,7 @@
 				</table>
 			</figure>
 				<div id="buttons">
-					<button type="button" id="cancel" onclick="location.href='/myweb/loginComplete.jsp'">취소</button>
+					<button type="button" id="cancel" onclick="location.href='/myweb/index.jsp'">취소</button>
 					<input type="submit" value="수정하기">
 					<button type="button" id="delete" onclick="location.href='/myweb/deleteAccount.jsp'">탈퇴하기</button>
 				</div>

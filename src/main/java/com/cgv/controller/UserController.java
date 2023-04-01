@@ -60,7 +60,9 @@ public class UserController extends HttpServlet {
 			String tel = request.getParameter("tel");
 			String email = request.getParameter("email");
 			
-			int result = service.signUp(username, userId, password, birthDate, tel, email);
+			UserDTO insertDto = new UserDTO(userId, password, username, birthDate, tel, email);
+			
+			int result = service.signUp(insertDto);
 			if(result == 1) {
 				response.setContentType("text/html");
 				PrintWriter out = response.getWriter();
@@ -70,7 +72,7 @@ public class UserController extends HttpServlet {
 				response.sendRedirect("login.jsp");
 			} else {
 				UserDTO dto = service.selectByUserId(userId);
-				if(dto.getUsername() == null) {
+				if(dto.getUserId().equals(userId)) {
 					response.setContentType("text/html");
 					PrintWriter out = response.getWriter();
 					out.println("<script>alert('중복된 아이디가 존재합니다.'); location.href='signUp.jsp' </script>");
@@ -94,10 +96,10 @@ public class UserController extends HttpServlet {
 			service.updateInfo(userId, password, tel, email);
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('정보 수정에 성공했습니다.'); location.href='loginComplete.jsp' </script>");
+			out.println("<script>alert('정보 수정에 성공했습니다.'); location.href='index.jsp' </script>");
 			out.flush();
 			response.flushBuffer();
-			response.sendRedirect("loginComplete.jsp");
+			response.sendRedirect("index.jsp");
 		} else if ("delete".equals(action)) {
 			String userId = (String)request.getSession().getAttribute("userId");
 			String password = request.getParameter("password");

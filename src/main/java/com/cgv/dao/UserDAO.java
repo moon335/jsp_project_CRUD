@@ -52,7 +52,7 @@ public class UserDAO implements IUserDAO{
 	}
 
 	@Override
-	public int insert(String username, String userId, String password, String birthDate, String tel, String email) {
+	public int insert(UserDTO dto) {
 		int resultRow = 0;
 		String queryStr = " INSERT INTO user(userId, password, username, birthDate, tel, email) "
 				+ " VALUES "
@@ -60,12 +60,12 @@ public class UserDAO implements IUserDAO{
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(queryStr);
-			pstmt.setString(1, userId);
-			pstmt.setString(2, password);
-			pstmt.setString(3, username);
-			pstmt.setString(4, birthDate);
-			pstmt.setString(5, tel);
-			pstmt.setString(6, email);
+			pstmt.setString(1, dto.getUserId());
+			pstmt.setString(2, dto.getPassword());
+			pstmt.setString(3, dto.getUsername());
+			pstmt.setString(4, dto.getBirthDate());
+			pstmt.setString(5, dto.getTel());
+			pstmt.setString(6, dto.getEmail());
 			resultRow = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

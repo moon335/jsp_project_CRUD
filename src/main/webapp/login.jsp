@@ -7,7 +7,7 @@
 		if(userDto.getUserId() != null) {
 			session.setAttribute("userId", userDto.getUserId());
 			session.setAttribute("password", userDto.getPassword());
-			response.sendRedirect("loginComplete.jsp");
+			response.sendRedirect("index.jsp");
 		} else {
 			out.println("<script>alert('아이디와 비밀번호를 확인해주세요.'); location.href='login.jsp' </script>");
 		}

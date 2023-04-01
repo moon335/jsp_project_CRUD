@@ -8,7 +8,6 @@
 	String username = (String)session.getAttribute("userId");
 	if(username != null) {%>
 		<jsp:include page="/layout/header2.jsp" />
-		<!-- response.sendRedirect("logincomplete.jsp"); -->
 	<% } else {%>
 		<jsp:include page="/layout/header.jsp" />
 	<%} %>

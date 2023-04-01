@@ -14,6 +14,15 @@ public class UserDTO {
 
 	}
 	
+	public UserDTO(String userId, String password, String username, String birthDate, String tel, String email) {
+		this.userId = userId;
+		this.password = password;
+		this.username = username;
+		this.birthDate = birthDate;
+		this.tel = tel;
+		this.email = email;
+	}
+
 	public UserDTO(int id, String userId, String password, String username, String birthDate, String tel,
 			String email) {
 		this.id = id;

@@ -186,7 +186,7 @@
 				<p>유의 및 안내 사항을 모두 확인하였으며, 탈퇴 시 위 사항에 동의한 것으로 간주합니다.</p>
 			</div>
 			<div id="buttons">
-				<button type="button" onclick="location.href='loginComplete.jsp'">취소</button>
+				<button type="button" onclick="location.href='index.jsp'">취소</button>
 				<input type="submit" value="탈퇴하기">
 			</div>
 		</section>
