@@ -9,6 +9,15 @@ public class TicketDTO {
 	private int theaterId;
 	private int movieId;
 	private int seatId;
+	private String username;
+	private String city;
+	private String theaterName;
+	private String seatName;
+	private String movieName;
+	private int price;
+	private String movieRated;
+	
+	public TicketDTO() {}
 	
 	public TicketDTO(int id, String date, String startTime, int userId, int theaterId, int movieId, int seatId) {
 		this.id = id;
@@ -62,7 +71,61 @@ public class TicketDTO {
 	public void setSeatId(int seatId) {
 		this.seatId = seatId;
 	}
-	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getTheaterName() {
+		return theaterName;
+	}
+
+	public void setTheaterName(String theaterName) {
+		this.theaterName = theaterName;
+	}
+
+	public String getSeatName() {
+		return seatName;
+	}
+
+	public void setSeatName(String seatName) {
+		this.seatName = seatName;
+	}
+	public String getMovieName() {
+		return movieName;
+	}
+
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getMovieRated() {
+		return movieRated;
+	}
+
+	public void setMovieRated(String movieRated) {
+		this.movieRated = movieRated;
+	}
+
 	@Override
 	public String toString() {
 		return "TicketDTO [id=" + id + ", date=" + date + ", startTime=" + startTime + ", userId=" + userId

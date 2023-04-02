@@ -83,5 +83,38 @@ public class TheaterDAO implements ITheaterDAO{
 		}
 		return dto;
 	}
+
+	@Override
+	public TheaterDTO select(int targetId) {
+		TheaterDTO dto = new TheaterDTO();
+		PreparedStatement pstmt= null;
+		ResultSet rs = null;
+		String queryStr = " SELECT * FROM theater WHERE id = ? ";
+		
+		try {
+			pstmt = conn.prepareStatement(queryStr);
+			pstmt.setInt(1, targetId);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String city = rs.getString("city");
+				String name = rs.getString("name");
+				
+				dto.setId(id);
+				dto.setCity(city);
+				dto.setName(name);			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return dto;
+	}
 	
 } // end of class

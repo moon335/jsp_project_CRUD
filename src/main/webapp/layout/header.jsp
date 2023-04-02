@@ -24,12 +24,12 @@
 		<div id="index">
 			<ul class="nav-depth1">
                 <li>
-                    <a href="http://www.cgv.co.kr/movies/?lt=1&ft=0">영화</a>
+                    <a href="#">영화</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/movies/?lt=1&ft=0"><strong>영화</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/movies/?lt=1&ft=0">무비차트</a></li>
-                        <li><a href="http://www.cgv.co.kr/arthouse/">아트하우스</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=30717">ICECON</a></li>
+                        <li><a href="#"><strong>영화</strong></a></li>
+                        <li><a href="#">무비차트</a></li>
+                        <li><a href="#">아트하우스</a></li>
+                        <li><a href="#">ICECON</a></li>
                     </ul>
                 </li>
                 <li>
@@ -41,50 +41,50 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="http://www.cgv.co.kr/ticket/">예매</a>
+                    <a href="/myweb/ticketController?action=needLogin">예매</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/ticket/"><strong>예매</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/ticket/">빠른예매</a></li>
-                        <li><a href="http://www.cgv.co.kr/reserve/show-times/">상영스케줄</a></li>
-                        <li><a href="http://www.cgv.co.kr/ticket/eng/newdefault.aspx">English Ticketing</a></li>
-                        <li><a href="http://www.cgv.co.kr/reserve/show-times/eng/">English Schedule</a></li>
+                        <li><a href="/myweb/ticketController?action=needLogin"><strong>예매</strong></a></li>
+                        <li><a href="/myweb/ticketController?action=needLogin">빠른예매</a></li>
+                        <li><a href="#">상영스케줄</a></li>
+                        <li><a href="#">English Ticketing</a></li>
+                        <li><a href="#">English Schedule</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="http://www.cgv.co.kr/culture-event/popcorn-store/">스토어</a>
+                    <a href="#">스토어</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/"><strong>스토어</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=1">패키지</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=2">영화관람권</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=3">기프트카드</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=4">콤보</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=5">팝콘</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=6">음료</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=7">스낵</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/store-category.aspx?CategoryIdx=10">플레이존</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/popcorn-store/introduce-gift-card.aspx?CategoryIdx=0">씨네샵 ></a></li>
+                        <li><a href="#"><strong>스토어</strong></a></li>
+                        <li><a href="#">패키지</a></li>
+                        <li><a href="#">영화관람권</a></li>
+                        <li><a href="#">기프트카드</a></li>
+                        <li><a href="#">콤보</a></li>
+                        <li><a href="#">팝콘</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">스낵</a></li>
+                        <li><a href="#">플레이존</a></li>
+                        <li><a href="#">씨네샵 ></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx#1">이벤트</a>
+                    <a href="#">이벤트</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx?mCode=001#1"><strong>이벤트</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx?mCode=001#1">SPECIAL</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx?mCode=004#1">영화/예매</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx?mCode=008#1">멤버십/CLUB</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/defaultNew.aspx?mCode=005#1">CGV극장별</a></li>
-                        <li><a href="http://www.cgv.co.kr/user/login/?returnURL=%2fuser%2fmycgv%2fevent%2fresult_list.aspx">제휴할인</a></li>
-                        <li><a href="http://www.cgv.co.kr/user/login/?returnURL=%2fuser%2fmycgv%2fevent%2fresult_list.aspx">당첨자 발표</a></li>
-                        <li><a href="http://www.cgv.co.kr/culture-event/event/end-list.aspx">종료된 이벤트</a></li>
+                        <li><a href="#"><strong>이벤트</strong></a></li>
+                        <li><a href="#">SPECIAL</a></li>
+                        <li><a href="#">영화/예매</a></li>
+                        <li><a href="#">멤버십/CLUB</a></li>
+                        <li><a href="#">CGV극장별</a></li>
+                        <li><a href="#">제휴할인</a></li>
+                        <li><a href="#">당첨자 발표</a></li>
+                        <li><a href="#">종료된 이벤트</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="http://www.cgv.co.kr/discount/discountlist.aspx#1">혜택</a>
+                    <a href="#">혜택</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/discount/discountlist.aspx#1"><strong>혜택</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/discount/discountlist.aspx#1">CGV 할인정보</a></li>
-                        <li><a href="https://www.cgv.co.kr/user/memberShip/ClubService.aspx">CLUB서비스</a></li>
-                        <li><a href="https://www.cgv.co.kr/user/login/?returnURL=%2fuser%2fvip-lounge%2fdefault.aspx">VIP 라운지</a></li>
+                        <li><a href="#"><strong>혜택</strong></a></li>
+                        <li><a href="#">CGV 할인정보</a></li>
+                        <li><a href="#">CLUB서비스</a></li>
+                        <li><a href="#">VIP 라운지</a></li>
                     </ul>
                 </li>
             </ul>

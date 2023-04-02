@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cgv.dto.UserDTO;
 import com.cgv.service.UserService;
@@ -25,6 +26,8 @@ public class UserController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		String action = request.getParameter("action");
+		String password = request.getParameter("delete");
+		UserService service = new UserService();
 		if("logout".equals(action)) {
 			response.sendRedirect("logout.jsp");
 		} else if("update".equals(action)) {
@@ -36,6 +39,26 @@ public class UserController extends HttpServlet {
 			out.flush();
 			response.flushBuffer();
 			response.sendRedirect("login.jsp");
+		}
+		
+		if (password != null) {
+			String userId = (String)request.getSession().getAttribute("userId");
+			int resultRow = service.deleteInfo(userId, password);
+			if(resultRow == 1) {
+				response.setContentType("text/html");
+				PrintWriter out = response.getWriter();
+				out.println("<script>alert('탈퇴처리가 정상적으로 완료되었습니다.'); location.href='logout.jsp' </script>");
+				out.flush();
+				response.flushBuffer();
+				response.sendRedirect("index.jsp");
+			} else {
+				response.setContentType("text/html");
+				PrintWriter out = response.getWriter();
+				out.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='deleteAccount.jsp' </script>");
+				out.flush();
+				response.flushBuffer();
+				response.sendRedirect("deleteAccount.jsp");
+			}
 		}
 	}
 
@@ -96,29 +119,12 @@ public class UserController extends HttpServlet {
 			service.updateInfo(userId, password, tel, email);
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('정보 수정에 성공했습니다.'); location.href='index.jsp' </script>");
+			HttpSession session = request.getSession();
+			session.invalidate();
+			out.println("<script>alert('정보 수정에 성공했습니다. 다시 로그인 해주세요.'); location.href='login.jsp' </script>");
 			out.flush();
 			response.flushBuffer();
 			response.sendRedirect("index.jsp");
-		} else if ("delete".equals(action)) {
-			String userId = (String)request.getSession().getAttribute("userId");
-			String password = request.getParameter("password");
-			int resultRow = service.deleteInfo(userId, password);
-			if(resultRow == 1) {
-				response.setContentType("text/html");
-				PrintWriter out = response.getWriter();
-				out.println("<script>alert('탈퇴처리가 정상적으로 완료되었습니다.'); location.href='logout.jsp' </script>");
-				out.flush();
-				response.flushBuffer();
-				response.sendRedirect("index.jsp");
-			} else {
-				response.setContentType("text/html");
-				PrintWriter out = response.getWriter();
-				out.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='deleteAccount.jsp' </script>");
-				out.flush();
-				response.flushBuffer();
-				response.sendRedirect("deleteAccount.jsp");
-			}
 		}
 		
 	} // end of post

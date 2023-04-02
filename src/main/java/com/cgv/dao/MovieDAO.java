@@ -88,4 +88,40 @@ public class MovieDAO implements IMovieDAO{
 		return dto;
 	}
 
-}
+	@Override
+	public MovieDTO select(int targetId) {
+		MovieDTO dto = new MovieDTO();
+		String queryStr = " SELECT * FROM movie WHERE id = ? ";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			pstmt = conn.prepareStatement(queryStr);
+			pstmt.setInt(1, targetId);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				int price = rs.getInt("price");
+				String movieRated = rs.getString("movieRated");
+				
+				dto.setId(id);
+				dto.setName(name);
+				dto.setPrice(price);
+				dto.setMovieRated(movieRated);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return dto;
+	}
+
+} // end of class

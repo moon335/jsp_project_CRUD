@@ -12,18 +12,18 @@ public class UserService {
 	}
 	
 	public UserDTO loginCheck(String userId, String password) {
-		UserDTO resultDto = dao.selectIdNPw(userId, password);
+		UserDTO resultDto = dao.select(userId, password);
 		return resultDto;
 	}
 	
 	public UserDTO selectByUserId(String userId) {
-		UserDTO resultDto = dao.selectByUserId(userId);
+		UserDTO resultDto = dao.select(userId);
 		return resultDto;
 	}
 	
-	public int signUp(String username, String userId, String password, String birthDate, String tel, String email) {
+	public int signUp(UserDTO dto) {
 		int resultRow = 0;
-		resultRow = dao.insert(username, userId, password, birthDate, tel, email);
+		resultRow = dao.insert(dto);
 		return resultRow;
 	}
 	

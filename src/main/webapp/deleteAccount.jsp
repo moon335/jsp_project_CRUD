@@ -121,7 +121,7 @@
 	}
 	
 </style>
-	<form action="userController?action=delete" method="post">
+	<form action="userController" method="get">
 		<section>
 			<div id="section-head">
 				<h1>회원탈퇴</h1>
@@ -178,7 +178,7 @@
 					</tr>
 					<tr>
 						<td>비밀번호</td>
-						<td><input type="text" name="password" required="required"></td>
+						<td><input type="password" name="delete" required="required"></td>
 					</tr>
 				</table>
 			</div>

@@ -8,5 +8,6 @@ public interface IMovieDAO {
 	
 	ArrayList<MovieDTO> select();
 	MovieDTO select(String name);
+	MovieDTO select(int targetId);
 	
 } 

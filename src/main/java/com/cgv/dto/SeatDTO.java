@@ -31,7 +31,7 @@ public class SeatDTO {
 		this.name = name;
 	}
 
-	public int isChecked() {
+	public int getIsChecked() {
 		return isChecked;
 	}
 

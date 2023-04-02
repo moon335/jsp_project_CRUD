@@ -1,6 +1,7 @@
 package com.cgv.dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -98,6 +99,39 @@ public class seatDAO implements ISeatDAO{
 			e.printStackTrace();
 		}
 		return resultRow;
+	}
+
+	@Override
+	public SeatDTO select(int targetId) {
+		SeatDTO dto = new SeatDTO();
+		String queryStr = " SELECT * FROM seat WHERE id = ? ";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(queryStr);
+			pstmt.setInt(1, targetId);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				int isChecked = rs.getInt("isChecked");
+				
+				dto.setId(id);
+				dto.setName(name);
+				dto.setChecked(isChecked);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return dto;
 	}
 	
 } // end of class

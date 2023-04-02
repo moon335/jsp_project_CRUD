@@ -17,7 +17,7 @@ public class UserDAO implements IUserDAO{
 	}
 	
 	@Override
-	public UserDTO selectByUserId(String targetUserId) {
+	public UserDTO select(String targetUserId) {
 		UserDTO dto = new UserDTO();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -47,6 +47,13 @@ public class UserDAO implements IUserDAO{
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return dto;
 	}
@@ -74,7 +81,7 @@ public class UserDAO implements IUserDAO{
 	}
 
 	@Override
-	public UserDTO selectIdNPw(String targetUserId, String targetPw) {
+	public UserDTO select(String targetUserId, String targetPw) {
 		UserDTO dto = new UserDTO();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -105,6 +112,12 @@ public class UserDAO implements IUserDAO{
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return dto;
 	}
@@ -126,6 +139,12 @@ public class UserDAO implements IUserDAO{
 			resultRow = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return resultRow;
 	}
@@ -143,8 +162,54 @@ public class UserDAO implements IUserDAO{
 			resultRow = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return resultRow;
+	}
+
+	@Override
+	public UserDTO select(int targetId) {
+		UserDTO dto = new UserDTO();
+		String queryStr = " SELECT * FROM user WHERE id = ? ";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			pstmt = conn.prepareStatement(queryStr);
+			pstmt.setInt(1, targetId);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String userId = rs.getString("userId");
+				String password = rs.getString("password");
+				String birthDate = rs.getString("birthDate");
+				String tel = rs.getString("tel");
+				String email = rs.getString("email");
+				
+				dto.setId(id);
+				dto.setUserId(userId);
+				dto.setPassword(password);
+				dto.setBirthDate(birthDate);
+				dto.setTel(tel);
+				dto.setEmail(email);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return dto;
 	}
 
 } // end of class
