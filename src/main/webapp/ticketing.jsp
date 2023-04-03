@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<jsp:include page="/layout/header.jsp" />
+<jsp:include page="/layout/header2.jsp" />
 <style>
 	section {
 		display: flex;
@@ -34,7 +34,7 @@
 	
 </style>
 	<section>
-		<form action="ticketController?action=insert" method="post" id="selectForm">
+		<form action="ticketController?action=choiceSeat" method="post" id="selectForm">
 			<select class="form-control" name="movie" id="movie">
 				<c:forEach var="movie" items="${movieList}">
 					<option value="${movie.name}">${movie.name}</option>
@@ -114,14 +114,7 @@
 				<option value="20:30">20:30</option>
 				<option value="23:00">23:00</option>
 			</select>
-			<select class="form-control" name="seat" id="seat">
-				<c:forEach var="seat" items="${seatList}">
-					<c:if test="${seat.isChecked == 1}">
-						<option value="${seat.name}">${seat.name}</option>
-					</c:if>
-				</c:forEach>
-			</select>
-			<input type="submit" value="예매하기">
+			<input type="submit" value="좌석선택">
 		</form>
 	</section>
 	<script>

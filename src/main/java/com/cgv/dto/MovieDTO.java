@@ -6,17 +6,19 @@ public class MovieDTO {
 	private String name;
 	private int price;
 	private String movieRated;
+	private String runningTime;
 	
 	public MovieDTO() {
 	}
 	
-	public MovieDTO(int id, String name, int price, String movieRated) {
+	public MovieDTO(int id, String name, int price, String movieRated, String runningTime) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.movieRated = movieRated;
+		this.runningTime = runningTime;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -41,10 +43,18 @@ public class MovieDTO {
 	public void setMovieRated(String movieRated) {
 		this.movieRated = movieRated;
 	}
-	
+	public String getRunningTime() {
+		return runningTime;
+	}
+
+	public void setRunningTime(String runningTime) {
+		this.runningTime = runningTime;
+	}
+
 	@Override
 	public String toString() {
-		return "MovieDTO [id=" + id + ", name=" + name + ", price=" + price + ", movieRated=" + movieRated + "]";
+		return "MovieDTO [id=" + id + ", name=" + name + ", price=" + price + ", movieRated=" + movieRated
+				+ ", runningTime=" + runningTime + "]";
 	}
-	
+
 } // end of class

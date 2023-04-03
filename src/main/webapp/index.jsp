@@ -124,9 +124,6 @@
 				<img src="images/존윅4.jpg" class="d-block w-100" alt="소울메이트">
 			</div>
 			<div class="carousel-item">
-				<img src="images/귀멸의칼날.jpg" class="d-block w-100" alt="소울메이트">
-			</div>
-			<div class="carousel-item">
 				<img src="images/리바운드.jpg" class="d-block w-100" alt="소울메이트">
 			</div>
 			<div class="carousel-item">
@@ -196,7 +193,7 @@
 				</div>
 				<div>
 					<img src="images/slide_img_웅남이.jpg" alt="스즈메">
-					<p>9위 웅남이</p>
+					<p>8위 웅남이</p>
 				</div>
 			</div>
 	      </div>
@@ -204,19 +201,19 @@
 	      	<div class="bx-group">
 				<div>
 					<img src="images/slide_흐르다.jpg" alt="스즈메">
-					<p>10위 흐르다</p>
+					<p>9위 흐르다</p>
 				</div>
 				<div>
 					<img src="images/slide_치킨래빗.jpg" alt="스즈메">
-					<p>11위 치킨래빗</p>
+					<p>10위 치킨래빗</p>
 				</div>
 				<div>
 					<img src="images/slide_멍뭉이.jpg" alt="스즈메">
-					<p>12위 멍뭉이</p>
+					<p>11위 멍뭉이</p>
 				</div>
 				<div>
 					<img src="images/slide_아바타.jpg" alt="스즈메">
-					<p>13위 아바타-물의 길</p>
+					<p>12위 아바타-물의 길</p>
 				</div>
 			</div>
 	      </div>

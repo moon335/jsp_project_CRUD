@@ -2,6 +2,7 @@
 <%@page import="com.cgv.service.UserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% 
 	String userId = (String)session.getAttribute("userId");
 	String userPw = (String)session.getAttribute("password");
@@ -91,6 +92,24 @@
 		cursor: pointer;
 	}
 	
+	.ticket {
+		border: none;
+		width: 100px;
+	}
+	
+	#theater-box {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#delete-button {
+		margin-bottom: 10px;
+		border: none;
+		padding: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	
 </style>
 	<section>
 		<div id="section-head">
@@ -131,6 +150,50 @@
 					</tr>
 				</table>
 			</figure>
+			<br>
+			<h3>예매정보</h3>
+			<c:forEach var="ticket" items="${list}">
+			<table id="ticketTable">
+			<tr>
+				<th class="line-td">이름</th>
+				<td>
+					<input type="text" class="ticket" value="${ticket.username}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+			<tr>
+				<th class="line-td">영화 제목</th>
+				<td>
+					<input type="text" class="ticket" value="${ticket.movieName}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+			<tr>
+				<th class="line-td">상영일</th>
+				<td>
+					<input type="text" class="ticket" value="${ticket.date}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+			<tr>
+				<th class="line-td">시작 시간</th>
+				<td>
+					<input type="text" class="ticket" value="${ticket.startTime}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+			<tr id="theaterName">
+				<th class="line-td">상영관</th>
+				<td id="theater-box">
+					<small class="ticket">${ticket.city}</small>
+					<input type="text" class="ticket" value="${ticket.theaterName}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+			<tr id="seatName">
+				<th class="line-td">좌석</th>
+				<td>
+					<input type="text" class="ticket" value="${ticket.seatName}" readonly="readonly" style="text-align: left">
+				</td>
+			</tr>
+		</table>
+		<button type="button" id="delete-button" onclick="location.href='ticketController?action=delete&ticketId=${ticket.id}'">예매취소</button>
+		</c:forEach>
 				<div id="buttons">
 					<button type="button" id="cancel" onclick="location.href='/myweb/index.jsp'">취소</button>
 					<input type="submit" value="수정하기">

@@ -16,6 +16,7 @@ public class TicketDTO {
 	private String movieName;
 	private int price;
 	private String movieRated;
+	private String runningTime;
 	
 	public TicketDTO() {}
 	
@@ -124,6 +125,13 @@ public class TicketDTO {
 
 	public void setMovieRated(String movieRated) {
 		this.movieRated = movieRated;
+	}
+	public String getRunningTime() {
+		return runningTime;
+	}
+
+	public void setRunningTime(String runningTime) {
+		this.runningTime = runningTime;
 	}
 
 	@Override

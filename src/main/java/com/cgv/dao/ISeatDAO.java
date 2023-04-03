@@ -6,9 +6,10 @@ import com.cgv.dto.SeatDTO;
 
 public interface ISeatDAO {
 	
-	ArrayList<SeatDTO> select();
-	SeatDTO select(String name);
-	SeatDTO select(int targetId);
-	int update(int id);
+	ArrayList<SeatDTO> select(int movieId);
+	SeatDTO select(String targetName, int movieId);
+	SeatDTO selectById(int targetId);
+	int update(String name, int movieId);
+	int update(int seatId);
 	
 } // end of class

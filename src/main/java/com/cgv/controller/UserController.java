@@ -2,6 +2,7 @@ package com.cgv.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.cgv.dto.TicketDTO;
 import com.cgv.dto.UserDTO;
+import com.cgv.service.TicketService;
 import com.cgv.service.UserService;
 
 @WebServlet("/userController")
@@ -28,10 +31,16 @@ public class UserController extends HttpServlet {
 		String action = request.getParameter("action");
 		String password = request.getParameter("delete");
 		UserService service = new UserService();
+		TicketService ticketService = new TicketService();
 		if("logout".equals(action)) {
 			response.sendRedirect("logout.jsp");
 		} else if("update".equals(action)) {
-			response.sendRedirect("myInfo.jsp");
+			HttpSession session = request.getSession();
+			String userId = (String)session.getAttribute("userId");
+			ArrayList<TicketDTO> list = ticketService.selectAllTicket(userId);
+			request.setAttribute("list", list);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("myInfo.jsp");
+			dispatcher.forward(request, response);
 		} else if("needLogin".equals(action)) {
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();

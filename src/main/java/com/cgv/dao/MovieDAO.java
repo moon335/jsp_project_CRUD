@@ -33,8 +33,9 @@ public class MovieDAO implements IMovieDAO{
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
 				String movieRated = rs.getString("movieRated");
+				String runningTime = rs.getString("runningTime");
 				
-				MovieDTO dto = new MovieDTO(id, name, price, movieRated);
+				MovieDTO dto = new MovieDTO(id, name, price, movieRated, runningTime);
 				
 				list.add(dto);
 			}
@@ -69,11 +70,13 @@ public class MovieDAO implements IMovieDAO{
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
 				String movieRated = rs.getString("movieRated");
+				String runningTime = rs.getString("runningTime");
 				
 				dto.setId(id);
 				dto.setName(name);
 				dto.setPrice(price);
 				dto.setMovieRated(movieRated);
+				dto.setRunningTime(runningTime);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -105,11 +108,13 @@ public class MovieDAO implements IMovieDAO{
 				String name = rs.getString("name");
 				int price = rs.getInt("price");
 				String movieRated = rs.getString("movieRated");
+				String runningTime = rs.getString("runningTime");
 				
 				dto.setId(id);
 				dto.setName(name);
 				dto.setPrice(price);
 				dto.setMovieRated(movieRated);
+				dto.setRunningTime(runningTime);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

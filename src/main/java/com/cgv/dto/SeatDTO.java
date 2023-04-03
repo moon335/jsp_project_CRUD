@@ -5,14 +5,18 @@ public class SeatDTO {
 	private int id;
 	private String name;
 	private int isChecked;
+	private int subSection;
+	private int movieId;
 	
 	public SeatDTO() {
 	}
-	
-	public SeatDTO(int id, String name, int isChecked) {
+
+	public SeatDTO(int id, String name, int isChecked, int subSection, int movieId) {
 		this.id = id;
 		this.name = name;
 		this.isChecked = isChecked;
+		this.subSection = subSection;
+		this.movieId = movieId;
 	}
 
 	public int getId() {
@@ -39,10 +43,25 @@ public class SeatDTO {
 		this.isChecked = isChecked;
 	}
 
+	public int getSubSection() {
+		return subSection;
+	}
+
+	public void setSubSection(int subSection) {
+		this.subSection = subSection;
+	}
+
+	public int getMovieId() {
+		return movieId;
+	}
+
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
+	}
+
 	@Override
 	public String toString() {
-		return "SeatDAO [id=" + id + ", name=" + name + ", isChecked=" + isChecked + "]";
+		return "SeatDTO [id=" + id + ", name=" + name + ", isChecked=" + isChecked + ", subSection=" + subSection + "]";
 	}
-	
 	
 } // end of class

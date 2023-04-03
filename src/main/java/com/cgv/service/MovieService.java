@@ -18,4 +18,9 @@ public class MovieService {
 		return list;
 	}
 	
+	public MovieDTO selectByMovieName(String name) {
+		MovieDTO resultDTO = movieDAO.select(name);
+		return resultDTO;
+	}
+	
 } // end of class
