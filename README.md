@@ -45,3 +45,6 @@ JSP CRUD project > cgv 따라해보기
 
 #### dto 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/dto-%EC%BD%94%EB%93%9C%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
 - dto 코드 모음
+
+#### 시연영상 - <a href="https://user-images.githubusercontent.com/83784251/229722579-4e07a305-277e-4aac-9804-425407c5e3f7.mp4">영상 보기</a>
+- 프로젝트 시연
