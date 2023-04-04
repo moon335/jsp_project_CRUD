@@ -2,15 +2,15 @@ package com.cgv.service;
 
 import java.util.ArrayList;
 
-import com.cgv.dao.seatDAO;
+import com.cgv.dao.SeatDAO;
 import com.cgv.dto.SeatDTO;
 
 public class SeatService {
 	
-	private seatDAO seatDAO;
+	private SeatDAO seatDAO;
 	
 	public SeatService() {
-		seatDAO = new seatDAO();
+		seatDAO = new SeatDAO();
 	}
 	
 	public ArrayList<SeatDTO> selectAll(int movieId) {

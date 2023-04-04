@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import com.cgv.dto.SeatDTO;
 import com.cgv.utils.DBHelper;
 
-public class seatDAO implements ISeatDAO{
+public class SeatDAO implements ISeatDAO{
 	
 	private Connection conn;
 	
-	public seatDAO() {
+	public SeatDAO() {
 		conn = DBHelper.getInstance().getConnection();
 	}
 	

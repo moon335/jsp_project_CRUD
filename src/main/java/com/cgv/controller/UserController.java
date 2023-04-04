@@ -33,7 +33,9 @@ public class UserController extends HttpServlet {
 		UserService service = new UserService();
 		TicketService ticketService = new TicketService();
 		if("logout".equals(action)) {
-			response.sendRedirect("logout.jsp");
+			HttpSession session = request.getSession();
+			session.invalidate();
+			response.sendRedirect("/myweb/connector?action=index");
 		} else if("update".equals(action)) {
 			HttpSession session = request.getSession();
 			String userId = (String)session.getAttribute("userId");

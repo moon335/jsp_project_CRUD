@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="/layout/header.jsp" />
+<jsp:include page="/layout/header2.jsp" />
 <style>
 	
 	section {
@@ -97,6 +97,6 @@
 				</td>
 			</tr>
 		</table>
-		<button type="button" onclick="location.href='index.jsp'" id="check">확인</button>
+		<button type="button" onclick="location.href='/myweb/connector?action=index'" id="check">확인</button>
 	</section>
 <jsp:include page="/layout/footer.jsp" />

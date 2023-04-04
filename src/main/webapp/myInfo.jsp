@@ -195,9 +195,9 @@
 		<button type="button" id="delete-button" onclick="location.href='ticketController?action=delete&ticketId=${ticket.id}'">예매취소</button>
 		</c:forEach>
 				<div id="buttons">
-					<button type="button" id="cancel" onclick="location.href='/myweb/index.jsp'">취소</button>
+					<button type="button" id="cancel" onclick="location.href='/myweb/connector?action=index'">취소</button>
 					<input type="submit" value="수정하기">
-					<button type="button" id="delete" onclick="location.href='/myweb/deleteAccount.jsp'">탈퇴하기</button>
+					<button type="button" id="delete" onclick="location.href='/myweb/connector?action=delete'">탈퇴하기</button>
 				</div>
 			</form>
 	</section>

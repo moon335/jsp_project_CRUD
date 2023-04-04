@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.cgv.dao.UserDAO;
-import com.cgv.dao.seatDAO;
+import com.cgv.dao.SeatDAO;
 import com.cgv.dto.MovieDTO;
 import com.cgv.dto.SeatDTO;
 import com.cgv.dto.TheaterDTO;

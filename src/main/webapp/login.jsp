@@ -7,9 +7,9 @@
 		if(userDto.getUserId() != null) {
 			session.setAttribute("userId", userDto.getUserId());
 			session.setAttribute("password", userDto.getPassword());
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("/myweb/connector?action=index");
 		} else {
-			out.println("<script>alert('아이디와 비밀번호를 확인해주세요.'); location.href='login.jsp' </script>");
+			out.println("<script>alert('아이디와 비밀번호를 확인해주세요.'); location.href='/myweb/connector?action=login' </script>");
 		}
 	}
 %>

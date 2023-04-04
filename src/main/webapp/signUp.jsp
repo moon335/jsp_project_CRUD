@@ -134,7 +134,7 @@
 				</ul>
 			</div>
 			<div id="buttons">
-				<button type="button" onclick="location.href='index.jsp'">취소</button>
+				<button type="button" onclick="location.href='/myweb/connector?action=index'">취소</button>
 				<input type="submit" value="회원가입">
 			</div>
 		</form>

@@ -11,7 +11,7 @@
 
 	<header>
 		<div id="logo-img">
-			<img alt="membership" src="images/membership.png">
+			<a href="/myweb/connector?action=index"><img alt="membership" src="images/membership.png"></a>
 		</div>
 		<div id="logo-img2">
 			<img alt="cgv" src="images/cgv.png">

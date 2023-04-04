@@ -11,14 +11,14 @@
 	<header>
 		<div id="top">
 			<div id="logo">
-				<a href="index.jsp"><img alt="대충 로고 파일" src="images/cgv로고.png"></a>
+				<a href="/myweb/connector?action=index"><img alt="대충 로고 파일" src="images/cgv로고.png"></a>
 			</div>
 			<div id="menu">
 				<img alt="카드광고" src="images/카드광고.png">
-				<a href="login.jsp"><img alt="로그인" src="images/로그인.png"></a>
-				<a href="signUp.jsp"><img alt="회원가입" src="images/회원가입.png"></a>
+				<a href="/myweb/connector?action=login"><img alt="로그인" src="images/로그인.png"></a>
+				<a href="/myweb/connector?action=signUp"><img alt="회원가입" src="images/회원가입.png"></a>
 				<a href="/myweb/userController?action=needLogin"><img alt="내정보" src="images/내정보.png"></a>
-				<a href="http://www.cgv.co.kr/support/default.aspx"><img alt="고객센터" src="images/고객센터.png"></a>
+				<a href="#"><img alt="고객센터" src="images/고객센터.png"></a>
 			</div>
 		</div>
 		<div id="index">
@@ -33,11 +33,11 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="http://www.cgv.co.kr/theaters/">극장</a>
+                    <a href="#">극장</a>
                     <ul class="nav-depth2">
-                        <li><a href="http://www.cgv.co.kr/theaters/"><strong>극장</strong></a></li>
-                        <li><a href="http://www.cgv.co.kr/theaters/">CGV극장</a></li>
-                        <li><a href="http://www.cgv.co.kr/theaters/special/defaultNew.aspx">특별관</a></li>
+                        <li><a href="#"><strong>극장</strong></a></li>
+                        <li><a href="#">CGV극장</a></li>
+                        <li><a href="#">특별관</a></li>
                     </ul>
                 </li>
                 <li>

@@ -2,11 +2,12 @@ package com.cgv.service;
 
 import java.util.ArrayList;
 
+
 import com.cgv.dao.MovieDAO;
 import com.cgv.dao.TheaterDAO;
 import com.cgv.dao.TicketDAO;
 import com.cgv.dao.UserDAO;
-import com.cgv.dao.seatDAO;
+import com.cgv.dao.SeatDAO;
 import com.cgv.dto.TicketDTO;
 
 public class TicketService {
@@ -15,14 +16,14 @@ public class TicketService {
 	private UserDAO userDAO;
 	private TheaterDAO theaterDAO;
 	private MovieDAO movieDAO;
-	private seatDAO seatDAO;
+	private SeatDAO seatDAO;
 	
 	public TicketService() {
 		ticketDAO = new TicketDAO();
 		userDAO = new UserDAO();
 		theaterDAO = new TheaterDAO();
 		movieDAO = new MovieDAO();
-		seatDAO = new seatDAO();
+		seatDAO = new SeatDAO();
 	}
 	
 	public ArrayList<TicketDTO> selectAllTicket(String userId) {
