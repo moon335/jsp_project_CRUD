@@ -34,14 +34,14 @@ JSP CRUD project > cgv 따라해보기
 - 영화 제목, 상영관, 날짜, 시간을 선택해 해당 영화에 맞는 좌석을 선택한다.
 - 이미 예매된 좌석일 경우 화면에 나타나지 않고, 예매되지 않은 좌석만 나타난다.
 
-### controller 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/Controller-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
+#### controller 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/Controller-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
 - controller 코드 모음
 
-### service 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/service-%EC%BD%94%EB%93%9C-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
+#### service 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/service-%EC%BD%94%EB%93%9C-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
 - service 코드 모음
 
-### dao 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/dao-%EC%BD%94%EB%93%9C-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
+#### dao 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/dao-%EC%BD%94%EB%93%9C-%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
 - dao 코드 모음
 
-### dto 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/dto-%EC%BD%94%EB%93%9C%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
+#### dto 모음 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/dto-%EC%BD%94%EB%93%9C%EB%AA%A8%EC%9D%8C" >상세보기 - WIKI 이동</a>
 - dto 코드 모음
