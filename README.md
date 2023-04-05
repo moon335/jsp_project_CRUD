@@ -11,6 +11,7 @@ JSP CRUD project > cgv 따라해보기
 - `Java`
 - `JDK SE 11`
 - **IDE** : Eclipse EE
+- **DATABASE**: MySQL
 
 ## 📌 주요 기능
 #### main 페이지 - <a href="https://github.com/moon335/jsp_project_CRUD/wiki/%EB%A9%94%EC%9D%B8-%ED%99%94%EB%A9%B4" >상세보기 - WIKI 이동</a>
